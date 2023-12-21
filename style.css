@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner-area{
+    background: url("./flower-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.nav-elements{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    align-items: center;
+}
+
+.logo{
+    font-size: 24px;
+    color: #fff;
+}
+
+.logo i{
+    color: #e0a48e;
+}
+
+.nav-items{
+    display: flex;
+    justify-content: space-between;
+    width: 68%;
+    align-items: center;
+}
+
+.nav-items ul{
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-items ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav-items button{
+    background: none;
+    color: #fff;
+    padding: .5rem 1.5rem;
+    font-size: 16px;
+    border-radius: 21px;
+    cursor: pointer;
+    border: 2px solid #e0a48e;
+    transition: all .3s;
+}
+
+.nav-items button:hover{
+    background: #e0a48e;
+}
+
+.fa-solid{
+    display: none;
+    font-size: 19px;
+    color: #fff;
+}
+
+@media (max-width: 820px){
+    .nav-items {
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        background: #000;
+        width: 75%;
+        height: 100vh;
+        justify-content: flex-start;
+        gap: 7rem;
+        animation-name: fadeIn;
+        animation-duration: .3s;
+        display: none;
+    }
+
+    .nav-items ul{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-items ul li{
+        border-bottom: 1px solid gray;
+        padding: 1.5rem 0;
+    }
+
+    .nav-items button{
+        background: #e0a48e;
+        width: 90%;
+        padding: .8rem 0;
+    }
+
+    .fa-bars{
+        display: block;
+    }
+
+    .hide-menu{
+        animation-name: fadeOut;
+        animation-duration: .3s;
+        transform: translateX(-100%);
+    }
+
+    @keyframes fadeIn{
+        from{
+            transform: translateX(-100%);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeOut{
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(-100%);
+        }
+    }
+}
